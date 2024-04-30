@@ -1,18 +1,15 @@
-import Recipe from "@/classes/Recipe"
-import React from "react";
-const zt= new Recipe("ZuppaToscana", ["SpicySausage", "Bacon", "Cream", "Potatoes", "Pepper", "kale", "Onions", "Garlic", "Olive-Oil","We never use seed-oils", "Italian Dish"]);
-export function ingredientspage (zt:Recipe)  {
-    return(
-       <div>
-{zt.ingredients}.forEach(function (ingredient) {
-  ingredient.
-}); 
-</div>    
-    )
- 
-}
 
-let num = [7, 8, 9];
-num.forEach(function (value) {
-  console.log(value);
-}); 
+import React from 'react';
+import { IngredientsList } from "@/components/IngredientsList";
+
+
+const IngredientsPage: React.FC = () => {
+    return (
+        <div className="container">
+            <header className="header">Ingredients List</header>
+            <IngredientsList></IngredientsList>
+        </div>
+    );
+};
+
+export default IngredientsPage;
